@@ -12,6 +12,9 @@ import HelloWorld from "./components/HelloWorld.vue";
   background-color: #1b2530;
   color: #f7f7f7;
 }
+a {
+  color: #42b983;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

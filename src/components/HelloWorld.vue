@@ -42,15 +42,26 @@ a {
 button {
   background-color: #42b983;
   border: none;
-  padding: 16px;
+  padding: 10px;
   cursor: pointer;
   color: #1b2530;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 14px;
   border-radius: 4px;
-  width: 200px;
+  margin-bottom: 1rem;
+}
+.usuarios {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .usuarios p {
-  font-size: 1.4rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  margin: 4px;
 }
 </style>
