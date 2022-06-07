@@ -29,16 +29,28 @@ export default {
 
 <template>
   <h1>{{ msg }}</h1>
-
   <button @click="getUsers">Mostrar usuários</button>
-
-  <div class="users" v-for="user in users" :key="user.id">
-    <h2>{{ user.firstName + " " + user.lastName }}</h2>
+  <div class="usuarios" v-for="user in users" :key="user.id">
+    <p><strong>Nome:</strong> {{ user.firstName + " " + user.lastName }}</p>
   </div>
 </template>
 
 <style scoped>
 a {
   color: #42b983;
+}
+button {
+  background-color: #42b983;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  color: #1b2530;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: 200px;
+}
+.usuarios p {
+  font-size: 1.4rem;
 }
 </style>
