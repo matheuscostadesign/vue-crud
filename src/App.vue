@@ -15,9 +15,9 @@ export default {
   <nav>
     <router-link to="/">Página Inicial</router-link> |
 
-    <router-link to="/create">Cadastrar</router-link> |
+    <router-link to="/cadastrar">Cadastrar</router-link> |
 
-    <router-link to="/read">Listar</router-link>
+    <router-link to="/listar">Listar</router-link>
   </nav>
 
   <router-view></router-view>

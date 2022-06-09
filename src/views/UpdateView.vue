@@ -24,18 +24,13 @@ export default {
         console.log(e);
       }
     },
-    async editUser(user) {
-      this.user.id = user.id;
-      this.user.firstName = user.firstName;
-      this.user.lastName = user.lastName;
-    },
   },
 };
 </script>
 
 <template>
   <form>
-    <h2>Atualizar</h2>
+    <h2>Editar</h2>
     <input type="text" v-model="firstName" placeholder="Nome" required /> <br />
     <input type="text" v-model="lastName" placeholder="Sobrenome" required /> <br />
     <button @click="updateUser">Alterar</button>

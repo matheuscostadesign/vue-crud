@@ -24,29 +24,37 @@ export default {
       if (x) {
         const user = await axios.delete("https://62950af263b5d108c199071e.mockapi.io/Usuarios/" + id);
         console.log(user);
-        alert("Usuário deletado com sucesso!");
+        //alert("Usuário deletado com sucesso!");
+        this.getUsers(); // atualiza automaticamente
       }
     },
+    async editUser(user) {
+      this.user.id = user.id;
+      this.user.firstName = user.firstName;
+      this.user.lastName = user.lastName;
+    },
+  },
+  beforeMount() {
+    // carrega a função ao abrir a tela
+    this.getUsers();
   },
 };
 </script>
 
 <template>
-  <button @click="getUsers">Mostrar</button> <br />
-  <br />
-
   <table>
     <tr>
       <th>Nome</th>
       <th>Sobrenome</th>
       <th>Controles</th>
     </tr>
+
     <tr class="users" v-for="user in users" :key="user.id">
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td>
-        <router-link to="/update">
-          <button>Editar</button>
+        <router-link to="/editar">
+          <button @click="editUser(user)">Editar</button>
         </router-link>
         <button @click="deleteUser(user.id)">Excluir</button>
       </td>

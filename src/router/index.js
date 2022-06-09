@@ -8,19 +8,19 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/create",
-    name: "create",
+    path: "/cadastrar",
+    name: "cadastrar",
     //component: CreateView, // sem lazy-load (carrega tudo no app.js)
     component: () => import("../views/CreateView.vue"), // com lazy-load
   },
   {
-    path: "/read",
-    name: "read",
+    path: "/listar",
+    name: "listar",
     component: () => import("../views/ReadView.vue"), // com lazy-load
   },
   {
-    path: "/update",
-    name: "update",
+    path: "/editar",
+    name: "editar",
     component: () => import("../views/UpdateView.vue"), // com lazy-load
   },
 ];
