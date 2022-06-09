@@ -1,29 +1,54 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+<script>
+import HeaderFixed from "@/components/HeaderFixed.vue";
+
+export default {
+  name: "HomeView",
+  components: {
+    HeaderFixed,
+  },
+};
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" width="120" />
-  <HelloWorld msg="CRUD Vue.js" />
+  <HeaderFixed msg="CRUD Vue.js" />
+
+  <nav>
+    <router-link to="/">Página Inicial</router-link> |
+
+    <router-link to="/create">Cadastrar</router-link> |
+
+    <router-link to="/read">Listar</router-link>
+  </nav>
+
+  <router-view></router-view>
 </template>
 
 <style>
 * {
-  background-color: #1b2530;
-  color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
+  height: 100vh;
   display: grid;
   place-items: center;
-  height: 100vh;
+  background-color: #1b2530;
+  color: #fff;
 }
 a {
   color: #42b983;
+  font-weight: bold;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+nav {
+  padding: 24px;
 }
 </style>
