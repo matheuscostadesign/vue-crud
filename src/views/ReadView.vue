@@ -35,8 +35,7 @@ export default {
     },
   },
   beforeMount() {
-    // carrega a função ao abrir a tela
-    this.getUsers();
+    this.getUsers(); // carrega a função ao abrir a tela
   },
 };
 </script>
@@ -56,9 +55,9 @@ export default {
       <td>{{ user.lastName }}</td>
       <td>
         <router-link to="/editar">
-          <button @click="editUser(user)">Editar</button>
+          <button class="btnEditar" @click="editUser(user.id)">Editar</button>
         </router-link>
-        <button @click="deleteUser(user.id)">Excluir</button>
+        <button class="btnExcluir" @click="deleteUser(user.id)">Excluir</button>
       </td>
     </tr>
   </table>
@@ -66,10 +65,20 @@ export default {
 
 <style>
 table {
-  text-align: left;
+  text-align: center;
 }
 th,
 td {
   padding: 6px;
+}
+button {
+  padding: 6px 10px;
+}
+.btnEditar {
+  background-color: #ccc;
+}
+.btnExcluir {
+  background-color: #ee5253;
+  color: #fff;
 }
 </style>

@@ -36,19 +36,44 @@ body {
   background-color: #1b2530;
   color: #fff;
 }
-a {
-  color: #42b983;
-  font-weight: bold;
-}
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-
+a {
+  color: #42b983;
+  font-weight: bold;
+}
+input {
+  background-color: transparent;
+  border: 2px solid #42b983;
+  padding: 10px;
+  margin-bottom: 16px;
+  color: #f7f7f7;
+  border-radius: 4px;
+  font-size: 16px;
+}
+input:focus {
+  background-color: transparent;
+  border: 2px solid #b3e3cd;
+  outline: none;
+  box-shadow: none;
+}
+input::placeholder {
+  color: #ccc;
+}
 nav {
   padding: 24px;
+}
+button {
+  padding: 4px 8px;
+  cursor: pointer;
+  background-color: #42b983;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
 }
 </style>

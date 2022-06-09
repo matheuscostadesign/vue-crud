@@ -16,7 +16,7 @@ export default {
           firstName: this.firstName,
           lastName: this.lastName,
         });
-        alert("Usuário cadastrado com sucesso!");
+        //alert("Usuário cadastrado com sucesso!");
         this.$router.push("/listar"); // Redireciona para a listagem
         console.log(user);
       } catch (e) {
@@ -29,8 +29,18 @@ export default {
 
 <template>
   <div>
-    <input type="text" v-model="firstName" placeholder="Nome" required /> <br />
+    <input type="text" v-model="firstName" placeholder="Nome" required autofocus /> <br />
     <input type="text" v-model="lastName" placeholder="Sobrenome" required /> <br />
-    <button @click="createUser">Cadastrar</button>
+    <button class="btnCadastrar" @click="createUser">Cadastrar</button>
   </div>
 </template>
+
+<style>
+button {
+  margin-right: 16px;
+}
+.btnCadastrar {
+  width: 220px;
+  height: 40px;
+}
+</style>
