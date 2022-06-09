@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+
 export default {
   name: "App",
   data() {
@@ -24,7 +25,6 @@ export default {
       if (x) {
         const user = await axios.delete("https://62950af263b5d108c199071e.mockapi.io/Usuarios/" + id);
         console.log(user);
-        //alert("Usuário deletado com sucesso!");
         this.getUsers(); // atualiza automaticamente
       }
     },
@@ -42,13 +42,15 @@ export default {
 </script>
 
 <template>
+  <!-- <div v-if="(users.length = 0)">OCULTAR</div>
+  <div v-else>MOSTRAR</div> -->
+
   <table>
     <tr>
       <th>Nome</th>
       <th>Sobrenome</th>
       <th>Controles</th>
     </tr>
-
     <tr class="users" v-for="user in users" :key="user.id">
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>

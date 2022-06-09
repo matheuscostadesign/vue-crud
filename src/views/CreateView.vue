@@ -17,6 +17,7 @@ export default {
           lastName: this.lastName,
         });
         alert("Usuário cadastrado com sucesso!");
+        this.$router.push("/listar"); // Redireciona para a listagem
         console.log(user);
       } catch (e) {
         console.log(e);
