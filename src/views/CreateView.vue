@@ -16,6 +16,7 @@ export default {
           firstName: this.firstName,
           lastName: this.lastName,
         });
+        alert("Usuário cadastrado com sucesso!");
         console.log(user);
       } catch (e) {
         console.log(e);
@@ -26,9 +27,9 @@ export default {
 </script>
 
 <template>
-  <form>
+  <div>
     <input type="text" v-model="firstName" placeholder="Nome" required /> <br />
     <input type="text" v-model="lastName" placeholder="Sobrenome" required /> <br />
     <button @click="createUser">Cadastrar</button>
-  </form>
+  </div>
 </template>

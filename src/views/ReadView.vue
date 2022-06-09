@@ -5,16 +5,26 @@ export default {
   data() {
     return {
       users: [],
+      user: {},
+      firstName: "",
+      lastName: "",
     };
   },
   methods: {
     async getUsers() {
       try {
         const users = await axios.get("https://62950af263b5d108c199071e.mockapi.io/Usuarios");
-
         this.users = users.data;
       } catch (e) {
         console.log(e);
+      }
+    },
+    async deleteUser(id) {
+      let x = window.confirm("Deseja realmente excluir o usuário?");
+      if (x) {
+        const user = await axios.delete("https://62950af263b5d108c199071e.mockapi.io/Usuarios/" + id);
+        console.log(user);
+        alert("Usuário deletado com sucesso!");
       }
     },
   },
@@ -35,8 +45,10 @@ export default {
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td>
-        <button>Editar</button>
-        <button>Excluir</button>
+        <router-link to="/update">
+          <button>Editar</button>
+        </router-link>
+        <button @click="deleteUser(user.id)">Excluir</button>
       </td>
     </tr>
   </table>

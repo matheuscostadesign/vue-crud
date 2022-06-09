@@ -18,6 +18,11 @@ const routes = [
     name: "read",
     component: () => import("../views/ReadView.vue"), // com lazy-load
   },
+  {
+    path: "/update",
+    name: "update",
+    component: () => import("../views/UpdateView.vue"), // com lazy-load
+  },
 ];
 
 const router = createRouter({
