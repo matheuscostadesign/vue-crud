@@ -43,6 +43,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  width: 100%;
+  max-width: 300px;
 }
 a {
   color: #42b983;
