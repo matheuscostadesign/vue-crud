@@ -15,6 +15,7 @@
     "sobrenome": "Sobrenome",
     "controles": "Controles",
     "btn-editar": "Editar",
-    "btn-excluir": "Excluir"
+    "btn-excluir": "Excluir",
+    "texto-vazio": "Nenhum cadastro..."
   }
 }

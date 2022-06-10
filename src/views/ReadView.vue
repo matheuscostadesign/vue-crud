@@ -41,26 +41,29 @@ export default {
 </script>
 
 <template>
-  <!-- <div v-if="(users.length = 0)">OCULTAR</div>
-  <div v-else>MOSTRAR</div> -->
+  <div v-if="users.length <= 0">
+    <p>{{ $t("pagina-listar.texto-vazio") }}</p>
+  </div>
 
-  <table>
-    <tr>
-      <th>{{ $t("pagina-listar.nome") }}</th>
-      <th>{{ $t("pagina-listar.sobrenome") }}</th>
-      <th>{{ $t("pagina-listar.controles") }}</th>
-    </tr>
-    <tr class="users" v-for="user in users" :key="user.id">
-      <td>{{ user.firstName }}</td>
-      <td>{{ user.lastName }}</td>
-      <td class="btnsControle">
-        <router-link to="/editar">
-          <button class="btnEditar" @click="editUser(user.id)">{{ $t("pagina-listar.btn-editar") }}</button>
-        </router-link>
-        <button class="btnExcluir" @click="deleteUser(user.id)">{{ $t("pagina-listar.btn-excluir") }}</button>
-      </td>
-    </tr>
-  </table>
+  <div v-else>
+    <table>
+      <tr>
+        <th>{{ $t("pagina-listar.nome") }}</th>
+        <th>{{ $t("pagina-listar.sobrenome") }}</th>
+        <th>{{ $t("pagina-listar.controles") }}</th>
+      </tr>
+      <tr class="users" v-for="user in users" :key="user.id">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td class="btnsControle">
+          <router-link to="/editar">
+            <button class="btnEditar" @click="editUser(user.id)">{{ $t("pagina-listar.btn-editar") }}</button>
+          </router-link>
+          <button class="btnExcluir" @click="deleteUser(user.id)">{{ $t("pagina-listar.btn-excluir") }}</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <style>

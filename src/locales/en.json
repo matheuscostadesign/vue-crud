@@ -15,6 +15,7 @@
     "sobrenome": "Last Name",
     "controles": "Operations",
     "btn-editar": "Update",
-    "btn-excluir": "Delete"
+    "btn-excluir": "Delete",
+    "texto-vazio": "Empty users..."
   }
 }
