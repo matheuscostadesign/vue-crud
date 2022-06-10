@@ -46,18 +46,18 @@ export default {
 
   <table>
     <tr>
-      <th>Nome</th>
-      <th>Sobrenome</th>
-      <th>Controles</th>
+      <th>{{ $t("pagina-listar.nome") }}</th>
+      <th>{{ $t("pagina-listar.sobrenome") }}</th>
+      <th>{{ $t("pagina-listar.controles") }}</th>
     </tr>
     <tr class="users" v-for="user in users" :key="user.id">
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
       <td class="btnsControle">
         <router-link to="/editar">
-          <button class="btnEditar" @click="editUser(user.id)">Editar</button>
+          <button class="btnEditar" @click="editUser(user.id)">{{ $t("pagina-listar.btn-editar") }}</button>
         </router-link>
-        <button class="btnExcluir" @click="deleteUser(user.id)">Excluir</button>
+        <button class="btnExcluir" @click="deleteUser(user.id)">{{ $t("pagina-listar.btn-excluir") }}</button>
       </td>
     </tr>
   </table>
@@ -77,6 +77,7 @@ button {
 }
 .btnEditar {
   background-color: #ccc;
+  margin-right: 16px;
 }
 .btnExcluir {
   background-color: #ee5253;

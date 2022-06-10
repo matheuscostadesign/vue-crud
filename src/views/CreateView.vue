@@ -29,9 +29,9 @@ export default {
 
 <template>
   <div class="formCadastro">
-    <input type="text" v-model="firstName" placeholder="Nome" required />
-    <input type="text" v-model="lastName" placeholder="Sobrenome" required />
-    <button class="btnCadastrar" @click="createUser">Cadastrar</button>
+    <input type="text" v-model="firstName" :placeholder="$t('pagina-cadastro.nome')" required />
+    <input type="text" v-model="lastName" :placeholder="$t('pagina-cadastro.sobrenome')" required />
+    <button class="btnCadastrar" @click="createUser">{{ $t("pagina-cadastro.botao") }}</button>
   </div>
 </template>
 

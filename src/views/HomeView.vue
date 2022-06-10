@@ -1,5 +1,5 @@
 <template>
   <div class="home">
-    <p>Exemplo de CRUD em Vue.js</p>
+    <p>{{ $t("pagina-inicial.texto") }}</p>
   </div>
 </template>

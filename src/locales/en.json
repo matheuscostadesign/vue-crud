@@ -1,0 +1,20 @@
+{
+  "pagina-inicial": {
+    "texto": "CRUD example in Vue.js",
+    "link-home": "Home",
+    "link-cadastro": "Create",
+    "link-listar": "Read"
+  },
+  "pagina-cadastro": {
+    "nome": "Name",
+    "sobrenome": "Last Name",
+    "botao": "Create Now"
+  },
+  "pagina-listar": {
+    "nome": "Name",
+    "sobrenome": "Last Name",
+    "controles": "Operations",
+    "btn-editar": "Update",
+    "btn-excluir": "Delete"
+  }
+}

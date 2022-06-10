@@ -1,0 +1,20 @@
+{
+  "pagina-inicial": {
+    "texto": "Exemplo de CRUD em Vue.js",
+    "link-home": "Página Inicial",
+    "link-cadastro": "Cadastrar",
+    "link-listar": "Listar"
+  },
+  "pagina-cadastro": {
+    "nome": "Nome",
+    "sobrenome": "Sobrenome",
+    "botao": "Cadastrar"
+  },
+  "pagina-listar": {
+    "nome": "Nome",
+    "sobrenome": "Sobrenome",
+    "controles": "Controles",
+    "btn-editar": "Editar",
+    "btn-excluir": "Excluir"
+  }
+}

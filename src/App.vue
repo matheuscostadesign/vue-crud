@@ -1,23 +1,25 @@
 <script>
 import HeaderFixed from "@/components/HeaderFixed.vue";
+import LocaleChanger from "./components/LocaleChanger.vue";
 
 export default {
   name: "HomeView",
   components: {
     HeaderFixed,
+    LocaleChanger,
   },
 };
 </script>
 
 <template>
   <HeaderFixed msg="CRUD Vue.js" />
-
+  <LocaleChanger />
   <nav>
-    <router-link to="/">Página Inicial</router-link> |
+    <router-link to="/">{{ $t("pagina-inicial.link-home") }}</router-link> |
 
-    <router-link to="/cadastrar">Cadastrar</router-link> |
+    <router-link to="/cadastrar">{{ $t("pagina-inicial.link-cadastro") }}</router-link> |
 
-    <router-link to="/listar">Listar</router-link>
+    <router-link to="/listar">{{ $t("pagina-inicial.link-listar") }}</router-link>
   </nav>
 
   <router-view></router-view>

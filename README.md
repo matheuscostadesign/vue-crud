@@ -24,5 +24,5 @@
 - [x] Componentes
 - [x] Rotas SPA
 - [x] Lazy-load
-- [ ] Suporte multi-idiomas (i18n)
+- [x] Suporte multi-idiomas (i18n)
 - [ ] V-if (exibir ou não)
