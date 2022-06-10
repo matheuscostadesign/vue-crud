@@ -19,7 +19,7 @@ const routes = [
     component: () => import("../views/ReadView.vue"), // com lazy-load
   },
   {
-    path: "/editar",
+    path: "/editar/:id",
     name: "editar",
     component: () => import("../views/UpdateView.vue"), // com lazy-load
   },

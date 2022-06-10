@@ -29,9 +29,25 @@ export default {
       }
     },
     async editUser(user) {
+      this.$router.push({ name: "editar", params: { id: user.id } });
       this.user.id = user.id;
       this.user.firstName = user.firstName;
       this.user.lastName = user.lastName;
+      console.log(user);
+    },
+    async updateUser() {
+      try {
+        const user = await axios.put("https://62950af263b5d108c199071e.mockapi.io/Usuarios/" + this.user.id, {
+          firstName: this.user.firstName,
+          lastName: this.user.lastName,
+        });
+        console.log(user.data);
+        alert("Usuário alterado!");
+        this.getUsers();
+        //this.$router.push("/listar"); // Redireciona para a listagem
+      } catch (e) {
+        console.log(e);
+      }
     },
   },
   beforeMount() {
@@ -56,9 +72,9 @@ export default {
         <td>{{ user.firstName }}</td>
         <td>{{ user.lastName }}</td>
         <td class="btnsControle">
-          <router-link to="/editar">
-            <button class="btnEditar" @click="editUser(user.id)">{{ $t("pagina-listar.btn-editar") }}</button>
-          </router-link>
+          <!-- <router-link to="/editar"> -->
+          <button class="btnEditar" @click="editUser(user)">{{ $t("pagina-listar.btn-editar") }}</button>
+          <!-- </router-link> -->
           <button class="btnExcluir" @click="deleteUser(user.id)">{{ $t("pagina-listar.btn-excluir") }}</button>
         </td>
       </tr>

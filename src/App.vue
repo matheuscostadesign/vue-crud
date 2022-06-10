@@ -44,7 +44,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   width: 100%;
-  max-width: 300px;
+  max-width: 340px;
 }
 a {
   color: #42b983;
