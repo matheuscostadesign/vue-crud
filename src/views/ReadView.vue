@@ -53,7 +53,7 @@ export default {
     <tr class="users" v-for="user in users" :key="user.id">
       <td>{{ user.firstName }}</td>
       <td>{{ user.lastName }}</td>
-      <td>
+      <td class="btnsControle">
         <router-link to="/editar">
           <button class="btnEditar" @click="editUser(user.id)">Editar</button>
         </router-link>
@@ -66,6 +66,7 @@ export default {
 <style>
 table {
   text-align: center;
+  width: 100%;
 }
 th,
 td {
@@ -80,5 +81,9 @@ button {
 .btnExcluir {
   background-color: #ee5253;
   color: #fff;
+  margin-right: 0;
+}
+th {
+  text-align: center;
 }
 </style>

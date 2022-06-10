@@ -28,9 +28,9 @@ export default {
 </script>
 
 <template>
-  <div>
-    <input type="text" v-model="firstName" placeholder="Nome" required autofocus /> <br />
-    <input type="text" v-model="lastName" placeholder="Sobrenome" required /> <br />
+  <div class="formCadastro">
+    <input type="text" v-model="firstName" placeholder="Nome" required />
+    <input type="text" v-model="lastName" placeholder="Sobrenome" required />
     <button class="btnCadastrar" @click="createUser">Cadastrar</button>
   </div>
 </template>
@@ -40,7 +40,11 @@ button {
   margin-right: 16px;
 }
 .btnCadastrar {
-  width: 220px;
+  width: 100%;
   height: 40px;
+}
+.formCadastro {
+  display: flex;
+  flex-direction: column;
 }
 </style>
